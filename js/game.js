@@ -19,7 +19,7 @@ const moveHero = (e) => {
     switch(e.key)  {
         case "ArrowRight":
         case "d":
-        stepXaxis = stepXaxis + 100;
+        stepXaxis = (stepXaxis === 700) ? stepXaxis : stepXaxis + 100;
         console.log(stepXaxis);
         hero.style.left = `${stepXaxis}px`;
         console.log(stepXaxis);
@@ -27,7 +27,7 @@ const moveHero = (e) => {
   
         case "ArrowLeft":
         case "a":    
-        stepXaxis = stepXaxis - 100;
+        stepXaxis = (stepXaxis === 0) ? stepXaxis : stepXaxis - 100;
         console.log(stepXaxis);
         hero.style.left = `${stepXaxis}px`;
         console.log(stepXaxis);
@@ -35,7 +35,7 @@ const moveHero = (e) => {
   
         case "ArrowUp":
         case "w":    
-        stepYaxis = stepYaxis - 100;
+        stepYaxis = (stepYaxis === 0) ? stepYaxis : stepYaxis - 100;
         console.log(stepYaxis);
         hero.style.top = `${stepYaxis}px`;
         console.log(stepYaxis);
@@ -43,7 +43,7 @@ const moveHero = (e) => {
   
         case "ArrowDown":
         case "s":    
-        stepYaxis = stepYaxis + 100;
+        stepYaxis = (stepYaxis === 500) ? stepYaxis : stepYaxis + 100;;
         console.log(stepYaxis);
         hero.style.top = `${stepYaxis}px`;
         console.log(stepYaxis);
