@@ -16,7 +16,8 @@ let stepXaxis = 100
 let stepYaxis = 500
 const moveHero = (e) => {
     console.log(e);
-    if(e.code === "ArrowRight"){
+    switch(e.key)  {
+        case "ArrowRight" || "d":
         stepXaxis = stepXaxis + 100;
         console.log(stepXaxis);
         hero.style.left = `${stepXaxis}px`;
